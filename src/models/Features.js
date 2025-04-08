@@ -9,7 +9,7 @@ const featureModel=mongoose.model("Feature",featureSchema); //database collectio
 
 export const addFeature= async (feature)=>{
     try {
-        const f=new eventModel(feature);
+        const f=new featureModel(feature);
         const result= await f.save(); // does the job of featureModel.insertOne(f);
         console.log(result);
     } catch (error) {

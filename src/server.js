@@ -19,7 +19,7 @@ app.listen(PORT,()=>{
 });
 
 app.use('/api/test', testroute);
-app.use('api/feature/',featureRoute);
+app.use('/api/feature',featureRoute);
 
 app.use((req,res)=>{
     res.status(404).send("404 not found");
