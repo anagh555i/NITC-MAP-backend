@@ -1,4 +1,11 @@
+import {addEvent} from "../models/Events.js"
+
 export function testapi(req, res){
+    addEvent({
+        eventName:"ragam",
+        start:Date.now(),
+        end:new Date(Date.now()+2*60*1000)
+    });
     res.status(200).send({"purpose": "testing"});
 };
 
