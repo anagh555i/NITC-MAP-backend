@@ -11,7 +11,7 @@ const app = express();
 dotenv.config();
 app.use(express.json());
 app.use(cors({
-    origin: 'https://nitc-map.vercel.app/', // allow your frontend https://nitc-map.vercel.app/  https://nitc-map.vercel.app/
+    origin: 'https://nitc-map.vercel.app', // allow your frontend https://nitc-map.vercel.app  https://nitc-map.vercel.app/
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // adjust if needed
     credentials: true
 }));
