@@ -4,11 +4,17 @@ import testroute from "./Routes/testroute.router.js"
 import featureRoute from "./Routes/featureRoute.router.js"
 import eventRoute from "./Routes/eventRoute.router.js"
 import {connectDB} from './db/connectDB.js'
+const cors = require('cors');
 
 const app = express();
 
 dotenv.config();
 app.use(express.json());
+app.use(cors({
+    origin: 'http://localhost:5173', // allow your frontend
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // adjust if needed
+    credentials: true
+}));
 
 const PORT = process.env.PORT ;
 const DB_URL= process.env.DATABASE_URL ;
