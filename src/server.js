@@ -2,6 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import testroute from "./Routes/testroute.router.js"
 import featureRoute from "./Routes/featureRoute.router.js"
+import eventRoute from "./Routes/eventRoute.router.js"
 import {connectDB} from './db/connectDB.js'
 
 const app = express();
@@ -20,6 +21,7 @@ app.listen(PORT,()=>{
 
 app.use('/api/test', testroute);
 app.use('/api/feature',featureRoute);
+app.use('/api/event',eventRoute);
 
 app.use((req,res)=>{
     res.status(404).send("404 not found");
