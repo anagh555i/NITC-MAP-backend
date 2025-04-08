@@ -17,3 +17,15 @@ export const addFeature= async (feature)=>{
         console.log(error);
     }
 }
+
+export const getAllFeatures= async ()=>{
+    try {
+        let result=await featureModel.find();
+        // console.log(result.length);
+        // result.forEach(result=>console.log(result._id));
+        // result=await result.json();
+        return result;
+    } catch (error) {
+        console.log(error);
+    }
+}

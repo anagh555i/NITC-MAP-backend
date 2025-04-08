@@ -11,3 +11,4 @@ export function addEventApi(req, res){
     });
     res.status(200).send({"purpose": "event addition"});
 };
+
