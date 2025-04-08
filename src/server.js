@@ -4,7 +4,7 @@ import testroute from "./Routes/testroute.router.js"
 import featureRoute from "./Routes/featureRoute.router.js"
 import eventRoute from "./Routes/eventRoute.router.js"
 import {connectDB} from './db/connectDB.js'
-const cors = require('cors');
+import cors from 'cors';
 
 const app = express();
 
