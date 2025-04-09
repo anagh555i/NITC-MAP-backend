@@ -21,3 +21,15 @@ export const addEvent= async (event)=>{
         console.log(error);
     }
 }
+
+export const getAllEvents= async ()=>{
+    try {
+        let result=await eventModel.find();
+        // console.log(result.length);
+        // result.forEach(result=>console.log(result._id));
+        // result=await result.json();
+        return result;
+    } catch (error) {
+        console.log(error);
+    }
+}

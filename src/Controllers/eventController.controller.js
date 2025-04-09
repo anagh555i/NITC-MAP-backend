@@ -1,4 +1,4 @@
-import {addEvent} from "../models/Events.js"
+import {addEvent,getAllEvents} from "../models/Events.js"
 
 export function addEventApi(req, res){
     const {eventName,poster,startTime,endTime,location}=req.body;
@@ -11,4 +11,10 @@ export function addEventApi(req, res){
     });
     res.status(200).send({"purpose": "event addition"});
 };
+
+export async function getAllEventsApi(req,res){
+    const result=await getAllEvents();
+    // console.log(result);
+    res.status(200).json(result);
+}
 
