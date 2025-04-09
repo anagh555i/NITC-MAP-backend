@@ -11,8 +11,8 @@ const app = express();
 dotenv.config();
 app.use(express.json());
 app.use(cors({
-    origin: 'http://localhost:5173', // allow your frontend https://nitc-map.vercel.app http://localhost:5173  
-    methods: ['GET', 'POST', 'PUT', 'DELETE'], // adjust if needed
+    origin: 'https://nitc-map.vercel.app', // https://nitc-map.vercel.app http://localhost:5173  
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], 
     credentials: true
 }));
 
